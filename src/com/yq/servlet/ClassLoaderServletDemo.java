@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/servlet/ClassLoaderServletDemo")
 public class ClassLoaderServletDemo extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor. 
@@ -23,11 +23,11 @@ public class ClassLoaderServletDemo extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	throws ServletException, IOException {
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
         response.setContentType("text/html");  
         PrintWriter out = response.getWriter();  
         ClassLoader loader = this.getClass().getClassLoader();  
@@ -38,15 +38,14 @@ public class ClassLoaderServletDemo extends HttpServlet {
         out.write(String.valueOf(loader));  
         out.flush();  
         out.close(); 
-	}
+    }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	throws ServletException, IOException {
-
-		doGet(request, response);
-	}
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+        doGet(request, response);
+    }
 
 }
