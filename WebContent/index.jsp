@@ -41,11 +41,35 @@
     </div>
     <br/>
 
-    <form action="${pageContext.request.contextPath}//jspdemo/ServletForRequest" method="post">
+    <form action="${pageContext.request.contextPath}/jspdemo/ServletForRequest" method="post">
         param01: <input type="text" name="param01" id="param01" value="param01Value"><br>
         param02: <input type="text" name="param02" id="param02" value="李四"><br>
         <input type="submit" value="jsp built-in request and response demo">
     </form>
     
+    <br/>Config
+    <div>
+        <a href="${pageContext.request.contextPath}/config">JSP config demo</a>
+    </div>
+    <br/>
+    
+    <br/>
+    <div>exception
+        <a href="${pageContext.request.contextPath}/jspdemo/ServletForException">JSP exception demo</a>
+    </div>
+    <br/>
+    <br/>
+         介绍完request，response，application，out，config，application，还有session，pageContext，page(通常page没有用，相当于Servlet的this)
+    </br>
+    session在关闭浏览器时才消失
+    </br>
+    application用于Servlet之间交互信息
+    
+    <br/>
+    <br/>session
+    <div>
+        <a href="${pageContext.request.contextPath}/jspdemo/ServletForSession">JSP session demo</a>
+    </div>
+
 </body>
 </html>
